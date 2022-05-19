@@ -1,0 +1,198 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.SavePlaceFragment">
+
+    <!--Toolbar-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_toolbar"/>
+
+    <!--Content-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_Medium"
+        android:paddingStart="@dimen/padding_Small"
+        android:paddingEnd="@dimen/padding_Small"
+        android:layout_marginTop="@dimen/_minus6sdp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/place_Input_Etxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_input_field"
+            android:drawableStart="@drawable/ic_place"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:drawablePadding="@dimen/padding_Default"
+            android:layout_margin="@dimen/margin_Medium"
+            android:padding="@dimen/padding_Medium"
+            android:textSize="@dimen/text_Size_X_Small"
+            android:textColor="@color/font_Color_Dark"
+            android:textColorHint="@color/font_Color_LightGray"
+            android:fontFamily="monospace"
+            android:hint="@string/searchPlace_Hint"
+            android:elevation="@dimen/card_Elevation_Default"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_Large"
+            android:paddingStart="@dimen/padding_Medium"
+            android:paddingEnd="@dimen/padding_Medium"
+            android:paddingBottom="@dimen/padding_Large"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Large"
+                android:text="@string/savePlaceAs"
+                android:textColor="@color/icon_Color_Dark"
+                android:textSize="@dimen/text_Size_X_Small"
+                android:textAllCaps="false"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/place_Home"
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:padding="@dimen/padding_Medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_place_home"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_Small"
+                        android:text="@string/home"
+                        android:textColor="@color/icon_Color_Gray"
+                        android:textSize="@dimen/text_Size_XXX_Small"
+                        android:textAllCaps="false"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_X_Large"
+                    android:layout_marginEnd="@dimen/margin_X_Large"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/place_Work"
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:padding="@dimen/padding_Medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_place_work"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_Small"
+                        android:text="@string/work"
+                        android:textColor="@color/icon_Color_Gray"
+                        android:textSize="@dimen/text_Size_XXX_Small"
+                        android:textAllCaps="false"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/place_Other"
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:padding="@dimen/padding_Medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_place_other"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_Small"
+                        android:text="@string/other"
+                        android:textColor="@color/icon_Color_Gray"
+                        android:textSize="@dimen/text_Size_XXX_Small"
+                        android:textAllCaps="false"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/placeNameHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_Medium"
+            android:paddingTop="@dimen/padding_Large"
+            android:paddingStart="@dimen/padding_Medium"
+            android:paddingEnd="@dimen/padding_Medium"
+            android:paddingBottom="@dimen/padding_Large"
+            android:background="@drawable/shape_input_field"
+            android:elevation="@dimen/card_Elevation_Default">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/placeName_Input_Etxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/padding_Small"
+                android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                android:textSize="@dimen/text_Size_X_Small"
+                android:textColor="@color/font_Color_Dark"
+                android:textColorHint="@color/font_Color_LightGray"
+                android:maxLines="1"
+                android:maxLength="24"
+                android:fontFamily="monospace"
+                android:hint="@string/placeName"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/updateBtn"
+        android:layout_width="@dimen/icon_Size_X_Large"
+        android:layout_height="@dimen/icon_Size_X_Large"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_Large"
+        android:background="@drawable/shape_round"
+        app:srcCompat="@drawable/ic_add"
+        android:tint="@color/icon_Color_Light"
+        android:elevation="@dimen/card_Elevation_Default"/>
+
+</RelativeLayout>

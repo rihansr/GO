@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="splash_Bg" type="drawable">@drawable/shape_splash</item>
+    <item name="activity_Bg" type="color">@color/colorWhite</item>
+    <item name="dialog_Bg" type="color">@color/colorWhite</item>
+    <item name="nav_Bg" type="color">@color/colorWhite</item>
+    <item name="icon_Color_Green" type="color">@color/colorPrimary</item>
+    <item name="icon_Color_Light" type="color">@color/colorWhite</item>
+    <item name="icon_Color_Dark" type="color">@color/colorBlack</item>
+    <item name="icon_Color_Gray" type="color">@color/colorGray</item>
+    <item name="font_Color_Green" type="color">@color/colorPrimary</item>
+    <item name="font_Color_Light" type="color">@color/colorWhite</item>
+    <item name="font_Color_Dark" type="color">@color/colorBlack</item>
+    <item name="font_Color_Gray" type="color">@color/colorGray</item>
+    <item name="font_Color_LightGray" type="color">@color/colorLightGray</item>
+</resources>

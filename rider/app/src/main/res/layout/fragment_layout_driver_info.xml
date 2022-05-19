@@ -1,0 +1,297 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_Bg"
+    tools:context=".fragment.ProfileFragment">
+
+    <!--Personal Information-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/profile_Photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_minus42sdp"
+        android:paddingTop="@dimen/_56sdp"
+        android:paddingStart="@dimen/padding_XX_Large"
+        android:paddingEnd="@dimen/padding_XX_Large"
+        android:paddingBottom="@dimen/padding_Large"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!--Driver Name-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/driverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Mr. Driver"
+                android:textSize="@dimen/text_Size_X_Large"
+                android:textColor="@color/font_Color_Dark"/>
+
+            <!--Vehicle Model-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vehicleModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_X_Small"
+                tools:text="Toyota Corolla"
+                android:textSize="@dimen/text_Size_X_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+            <!--Other Information-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_XX_Large"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--Total Trips-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top|center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/totalTrips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_XX_Small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="125"
+                        android:textSize="@dimen/text_Size_XX_Large"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_XX_Small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/trips"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/border_Large"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/margin_Medium"
+                    android:layout_marginEnd="@dimen/margin_Medium"
+                    android:background="@color/colorSmokeWhite"/>
+
+                <!--Driver Rating-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top|center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_XX_Small"
+                        android:drawableEnd="@drawable/ic_rating_star"
+                        android:drawablePadding="@dimen/padding_Small"
+                        android:drawableTint="@color/icon_Color_Dark"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="3.5"
+                        android:textSize="@dimen/text_Size_XX_Large"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_XX_Small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/rating"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="@dimen/border_Large"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/margin_Medium"
+                    android:layout_marginEnd="@dimen/margin_Medium"
+                    android:background="@color/colorSmokeWhite"/>
+
+                <!--Period-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top|center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_XX_Small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        tools:text="2"
+                        android:textSize="@dimen/text_Size_XX_Large"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_XX_Small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/years"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/notesPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:orientation="vertical">
+
+                <!--Divider-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_Small"
+                    android:layout_marginTop="@dimen/margin_X_Large"
+                    android:layout_marginBottom="@dimen/margin_X_Large"
+                    android:background="@color/colorSmokeWhite" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    android:text="@string/thankYouNotes"
+                    android:textSize="@dimen/text_Size_Default"
+                    android:textColor="@color/font_Color_Dark"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/sample_notes"
+                    android:overScrollMode="never"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Cover Photo-->
+    <com.go.rider.wiget.ArcView
+        android:id="@+id/coverPhotoHolder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/coverPhoto_size"
+        app:layout_collapseMode="parallax"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="@dimen/_12sdp"
+        app:shape_arc_position="bottom">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cover_Photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/shape_placeholder"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="top"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_Small"
+                android:paddingEnd="@dimen/padding_Small"
+                android:layout_marginTop="@dimen/margin_XX_Large">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back_Btn"
+                    android:layout_width="@dimen/icon_Size_X_Large"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/padding_Default"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top|end"
+                    android:layout_alignParentEnd="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/call_Btn"
+                        android:layout_width="@dimen/icon_Size_X_Large"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_Default"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_call"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/report_Btn"
+                        android:layout_width="@dimen/icon_Size_X_Large"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_Default"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        app:srcCompat="@drawable/ic_report"/>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </com.go.rider.wiget.ArcView>
+
+    <!--Profile Photo-->
+    <com.go.rider.wiget.CircleImageView
+        android:id="@+id/profile_Photo"
+        android:layout_width="@dimen/icon_Size_XXXX_Large"
+        android:layout_height="@dimen/icon_Size_XXXX_Large"
+        android:layout_below="@+id/coverPhotoHolder"
+        android:layout_marginTop="@dimen/_minus42sdp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/shape_round"
+        android:backgroundTint="@android:color/white"
+        tools:src="@drawable/ic_avatar_male"
+        android:elevation="@dimen/card_Elevation_Default"/>
+
+</RelativeLayout>

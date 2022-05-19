@@ -1,0 +1,84 @@
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tripFaresContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="false"
+    tools:context=".activity.HomeActivity">
+
+    <!--Shadow View-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shadow_Height"
+        android:background="@drawable/shape_top_shadow"
+        app:layout_anchor="@id/requestContent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/requestContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <!--Drag Handle-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_minus6sdp"
+            android:alpha=".5"
+            app:srcCompat="@drawable/ic_bar"/>
+
+        <!--Trip Fares-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_X_Large"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--Title-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium"
+                android:text="@string/chooseARide"
+                android:textStyle="normal"
+                android:textColor="@color/font_Color_Dark"
+                android:textSize="@dimen/text_Size_XXX_Small"
+                android:textAlignment="center" />
+
+            <!--Fares-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvFares"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="2"
+                tools:listitem="@layout/sample_trip_fare"
+                android:overScrollMode="never"/>
+
+            <!--Confirm Trip-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button_enable"
+                android:layout_marginTop="@dimen/margin_Large"
+                android:layout_marginStart="@dimen/padding_Large"
+                android:layout_marginEnd="@dimen/padding_Large"
+                android:padding="@dimen/padding_Medium"
+                android:textSize="@dimen/text_Size_Small"
+                android:textColor="@color/font_Color_Light"
+                android:textAllCaps="false"
+                android:text="@string/confirmPickup"
+                android:elevation="@dimen/card_Elevation_Medium"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

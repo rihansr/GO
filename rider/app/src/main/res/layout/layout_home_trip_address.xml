@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tripAddressContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight="@dimen/_124sdp"
+    app:behavior_hideable="false"
+    tools:context=".activity.HomeActivity">
+
+    <!--Shadow View-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shadow_Height"
+        android:background="@drawable/shape_top_shadow"
+        app:layout_anchor="@id/requestContent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <!--Greetings-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/greetingsTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_Default"
+            android:background="@color/colorWhite"
+            tools:text="Hello, Rider"
+            android:textStyle="normal"
+            android:textColor="@color/font_Color_Dark"
+            android:textSize="@dimen/text_Size_Medium"
+            android:textAlignment="center" />
+
+        <!--Progressbar-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorSmokeWhite"/>
+
+            <ProgressBar
+                android:id="@+id/loadingProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:indeterminateTint="@color/colorPrimary"
+                android:indeterminateBehavior="cycle"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                android:layout_height="@dimen/_6sdp" />
+
+        </FrameLayout>
+
+        <!--Place Selection-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_Bg"
+            android:orientation="vertical">
+
+            <!--Drag Handle-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_minus6sdp"
+                android:alpha=".5"
+                app:srcCompat="@drawable/ic_bar"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_Medium">
+
+                <!--Where To Button-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/whereTo_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_input_field"
+                    android:layout_marginStart="@dimen/margin_Large"
+                    android:layout_marginEnd="@dimen/margin_Large"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    android:padding="@dimen/padding_Default"
+                    android:textSize="@dimen/text_Size_Default"
+                    android:text="@string/whereTo_Hint"
+                    android:textColor="@color/font_Color_Dark"
+                    android:elevation="@dimen/card_Elevation_Medium"/>
+
+                <!--Home Content-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/homeAddress_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginStart="@dimen/padding_Large"
+                    android:layout_marginEnd="@dimen/padding_Large"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <!--Home Icon-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:padding="@dimen/padding_Medium"
+                        android:scaleType="centerCrop"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/ic_place_home"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:orientation="vertical">
+
+                        <!--Home Title-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_Large"
+                            android:layout_marginBottom="@dimen/margin_XX_Small"
+                            android:textColor="@color/font_Color_Dark"
+                            android:textSize="@dimen/text_Size_Small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:text="@string/home" />
+
+                        <!--Home Address-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/homeAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_Large"
+                            android:layout_marginTop="@dimen/margin_XX_Small"
+                            android:textColor="@color/font_Color_Gray"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:clickable="false"
+                            android:focusable="false"
+                            tools:text="Chittagong, an" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Go To Home Address-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:padding="@dimen/padding_Small"
+                        android:layout_marginEnd="@dimen/_minus8sdp"
+                        android:scaleType="centerCrop"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/ic_arrow"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:id="@+id/divider"
+                    style="@style/DividerStyle.Small"
+                    android:layout_marginTop="@dimen/margin_Large"
+                    android:layout_marginStart="@dimen/_52sdp"
+                    android:layout_marginBottom="@dimen/margin_Large"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <!--Work Content-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/workAddress_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_Large"
+                    android:layout_marginEnd="@dimen/padding_Large"
+                    android:layout_marginBottom="@dimen/padding_X_Large"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <!--Work Icon-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:padding="@dimen/padding_Medium"
+                        android:scaleType="centerCrop"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/ic_place_work"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:orientation="vertical">
+
+                        <!--Work Title-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_Large"
+                            android:layout_marginBottom="@dimen/margin_XX_Small"
+                            android:textColor="@color/font_Color_Dark"
+                            android:textSize="@dimen/text_Size_Small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:text="@string/work" />
+
+                        <!--Work Address-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/workAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_Large"
+                            android:layout_marginTop="@dimen/margin_XX_Small"
+                            android:textColor="@color/font_Color_Gray"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:clickable="false"
+                            android:focusable="false"
+                            tools:text="Chittagong, an" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Go To Work Address-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_Size_Medium"
+                        android:layout_height="@dimen/icon_Size_Medium"
+                        android:padding="@dimen/padding_Small"
+                        android:layout_marginEnd="@dimen/_minus8sdp"
+                        android:scaleType="centerCrop"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/ic_arrow"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

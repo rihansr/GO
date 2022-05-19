@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "103950522518",
+    "firebase_url": "https://go-ride-sharing.firebaseio.com",
+    "project_id": "go-ride-sharing",
+    "storage_bucket": "go-ride-sharing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103950522518:android:ba21ff35e03d05d34ccab7",
+        "android_client_info": {
+          "package_name": "com.go.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103950522518-7pd3u6b49t0iqfk53m6at6spgjg9rgpq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.driver",
+            "certificate_hash": "eb50c399a5dc12fa737500beb37aedd6dae9d399"
+          }
+        },
+        {
+          "client_id": "103950522518-cr8kt5qska98mbgmueaocsgt6ha0l4hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.driver",
+            "certificate_hash": "ed0ce3cbe7e8cbd8231ae632947d9d9244bc8305"
+          }
+        },
+        {
+          "client_id": "103950522518-5499t7r1qnv3l456f2kt7vqm4k1bqfqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbgXtIm-sDp7lORKff3MGSoSbG6RXPdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103950522518-5499t7r1qnv3l456f2kt7vqm4k1bqfqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103950522518:android:7da5d5cb7815ce194ccab7",
+        "android_client_info": {
+          "package_name": "com.go.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103950522518-req9f9kuj9kth7s57dv5epg0upv88red.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.rider",
+            "certificate_hash": "eb50c399a5dc12fa737500beb37aedd6dae9d399"
+          }
+        },
+        {
+          "client_id": "103950522518-5t036i5o8tk8s60b9j10k3c8dliifn75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.rider",
+            "certificate_hash": "9049e2d2b8e183edb21e112f49c84d618a9b5988"
+          }
+        },
+        {
+          "client_id": "103950522518-5499t7r1qnv3l456f2kt7vqm4k1bqfqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbgXtIm-sDp7lORKff3MGSoSbG6RXPdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103950522518-5499t7r1qnv3l456f2kt7vqm4k1bqfqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

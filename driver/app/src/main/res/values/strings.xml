@@ -1,0 +1,191 @@
+<resources>
+
+    <!--Title-->
+    <string name="app_name">GO-Driver</string>
+    <string name="rideSharing">Ride Sharing App</string>
+    <string name="countryCode">+88</string>
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="signOut">Sign Out</string>
+    <string name="verification">Verification</string>
+    <string name="phoneTitle">Phone</string>
+    <string name="nameTitle">Full Name</string>
+    <string name="emailTitle">Email</string>
+    <string name="genderTitle">Gender</string>
+    <string name="nidTitle">National ID</string>
+    <string name="licenseTitle">Driving License</string>
+    <string name="vehicleTypeTitle">Vehicle Type</string>
+    <string name="vehicleModelTitle">Vehicle Model</string>
+    <string name="licensePlateTitle">License Plate</string>
+    <string name="addressTitle">Address</string>
+    <string name="districtTitle">District</string>
+    <string name="upazilaTitle">Upazila</string>
+    <string name="postalCodeTitle">Postal Code</string>
+    <string name="countryTitle">Country</string>
+    <string name="dobTitle">Date Of Birth</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="verificationCode">Verification Code</string>
+    <string name="chooseAction">Choose Action</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="morning">Good Morning</string>
+    <string name="afternoon">Good Afternoon</string>
+    <string name="evening">Good Evening</string>
+    <string name="hello">Hello</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="yourTrips">Your Trips</string>
+    <string name="notification">Notification</string>
+    <string name="about">About</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="language">Language</string>
+    <string name="km">Km</string>
+    <string name="kmAway">km away</string>
+    <string name="second">Sec</string>
+    <string name="minute">Min</string>
+    <string name="hour">HR</string>
+    <string name="day">Day</string>
+    <string name="pickUp">Pickup</string>
+    <string name="dropOff">Dropoff</string>
+    <string name="myLocation">My Location</string>
+    <string name="pickUpLocation">Pickup Location</string>
+    <string name="model">Model</string>
+    <string name="details">Details</string>
+    <string name="tripId">Trip Id #</string>
+    <string name="totalFare">Total Fare</string>
+    <string name="paymentType">Payment Type</string>
+    <string name="cash">Cash</string>
+    <string name="fareBreakdown">Fare Breakdown</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="promo">Promo</string>
+    <string name="total">Total</string>
+    <string name="rating">Rating</string>
+    <string name="trips">Trips</string>
+    <string name="years">Years</string>
+    <string name="youRideWith">You rode with</string>
+    <string name="tripDetails">Trip Details</string>
+    <string name="shareAPkVia">Share Apk Via</string>
+    <string name="select_CoverPhoto">Select Cover photo</string>
+    <string name="select_ProfilePhoto">Select Profile photo</string>
+    <string name="preferences">Preferences</string>
+    <string name="allowNotifications">Allow Notifications</string>
+    <string name="permissions">Permissions</string>
+    <string name="phoneCallAccess">Phone Call Access</string>
+    <string name="callPermission">Call Permission</string>
+    <string name="locationAccess">Location Access</string>
+    <string name="locationPermission">Location Permission</string>
+    <string name="cameraAccess">Camera Access</string>
+    <string name="cameraPermission">Camera Permission</string>
+    <string name="galleryAccess">Gallery Access</string>
+    <string name="galleryPermission">Gallery Permission</string>
+    <string name="thankYouNotes">Rider thank you notes</string>
+    <string name="tripIssues">Trip Issues and Refunds</string>
+    <string name="whyReporting">Why are you reporting this profile?</string>
+
+    <!--Hints-->
+    <string name="verificationCode_Hint">Enter the 6 digit code</string>
+    <string name="name_Hint">Enter name (Same as NID)</string>
+    <string name="email_Hint">Enter email</string>
+    <string name="gender_Hint">Select gender</string>
+    <string name="phone_Hint">Enter mobile number</string>
+    <string name="vehicleType_Hint">Select vehicle type</string>
+    <string name="vehicleModel_Hint">Enter Model No.</string>
+    <string name="licensePlate_Hint">Enter License Plate No.</string>
+    <string name="address_Hint">Enter address</string>
+    <string name="country_Hint">Country</string>
+    <string name="district_Hint">District</string>
+    <string name="upazila_Hint">Upazila</string>
+    <string name="dob_Hint">Birth date</string>
+    <string name="postalCode_Hint">Postal Code</string>
+    <string name="nid_Hint">Enter National ID No.</string>
+    <string name="drivingLicense_Hint">Enter Driving License No.</string>
+    <string name="message_Hint">Message…</string>
+    <string name="tellUsMore">Please, tell us more</string>
+
+
+    <!--Input Error-->
+    <string name="name_Error">Please! Enter your name</string>
+    <string name="email_Error">Please! Enter your email</string>
+    <string name="phone_Error">Please! Enter your mobile number</string>
+    <string name="validEmail_Error">Please! Enter valid email</string>
+    <string name="nid_Error">Please! Enter nid no</string>
+    <string name="validPhone_Error">Please! Enter valid number</string>
+    <string name="phoneExist_Error">Please! Enter new number</string>
+    <string name="district_Error">Please! Select district</string>
+    <string name="upazila_Error">Please! Select Upazila</string>
+    <string name="nidPhoto_Error">Please! Upload National Id photo</string>
+    <string name="license_Error">Please! Enter Driving License no</string>
+    <string name="licensePhoto_Error">Please! Upload Driving License photo</string>
+    <string name="vehicleType_Error">Please! Select vehicle type</string>
+    <string name="vehicleModel_Error">Please! Enter vehicle model</string>
+    <string name="licensePlate_Error">Please! Enter license plate no</string>
+
+
+    <!--Message-->
+    <string name="allowNotificationMessage">&quot;Driver&quot; app requires Notification permission, do you allow?</string>
+    <string name="includingNotification">Including: Push Notification</string>
+    <string name="dontAskAgain">Don\'t ask again once prohibited</string>
+    <string name="network_Error">Network error. Please retry when network is stable.</string>
+    <string name="profileUpdateFailed">Sorry! Profile Update failed, please try again later</string>
+    <string name="callPermissionMessage">Phone Call Permission is necessary for calling</string>
+    <string name="galleryPermissionMessage">Gallery Permission is necessary for selecting photo</string>
+    <string name="locationPermissionMessage">Location Permission is necessary for getting Location</string>
+    <string name="cameraPermissionMessage">Camera Permission is necessary for capturing photo</string>
+    <string name="Register_Failed">Sorry, Registration Failed</string>
+    <string name="failureMessage">Sorry! please try again</string>
+    <string name="phoneCallAccessDetails">To contact with rider</string>
+    <string name="locationAccessDetails">For a better pickup experience</string>
+    <string name="cameraAccessDetails">Capture photo using device camera</string>
+    <string name="galleryAccessDetails">Upload photo from gallery</string>
+    <string name="profile_NotCompleted">Fill out your profile to get verified</string>
+    <string name="select_Nid">Select NID photo</string>
+    <string name="playServiceError">Please Install google play services to use this application</string>
+    <string name="rideCancelled">Your ride has been cancelled</string>
+    <string name="invalidCode">Invalid code entered…</string>
+    <string name="fixError">Something is wrong, we will fix it soon…</string>
+    <string name="haveRecords">Sorry, this number is already taken. Please try another</string>
+    <string name="howWasRider">How was your rider?</string>
+    <string name="notVerified">Sorry, Your account is not verified yet</string>
+    <string name="thanksForReport">Thank you for letting us know</string>
+    <string name="feedbackMessage">We will look att your feedback and take any necessary action. Thank you for helping to improve the GO community.</string>
+
+
+    <!--Dialog-->
+    <string name="okay">Okay</string>
+    <string name="allow" translatable="false">Allow Now</string>
+    <string name="forbid" translatable="false">Forbid</string>
+    <string name="notNow">Not Now</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="done">Done</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="decline">Decline</string>
+    <string name="call">Call</string>
+    <string name="start">Start</string>
+    <string name="resendCode">Resend Code</string>
+    <string name="retry">Retry</string>
+    <string name="submit">Submit</string>
+    <string name="complete">Complete</string>
+    <string name="letsStart">Let\'s Start</string>
+    <string name="yesCancel">Yes, Cancel</string>
+    <string name="cancelRide">Cancel Ride?</string>
+    <string name="startRide">Start Ride?</string>
+    <string name="endRide">End Ride?</string>
+    <string name="contact">Contact</string>
+    <string name="newMessage"><![CDATA[Contact<sup><font color=#FE0051>&#9679;</font></sup>]]></string>
+    <string name="finish">Finish</string>
+    <string name="rateRider">Rate Rider</string>
+    <string name="processing">Processing…</string>
+    <string name="pleaseWait">Please wait…</string>
+    <string name="openSettings">Open Settings</string>
+    <string name="goOn">Go on</string>
+    <string name="verifyNumber">Verifying Mobile Number</string>
+    <string name="checkingVerificationCode">Checking verification code…</string>
+    <string name="receiveCode">Please Wait to receive a code</string>
+    <string name="cancelRideMessage">Are you sure you want to cancel your ride with</string>
+    <string name="startRideMessage">Are you sure you want to start the ride?</string>
+    <string name="endRideMessage">Are you sure you want to end your ride at this time?</string>
+
+</resources>

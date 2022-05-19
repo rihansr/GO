@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_X_Small"
+    android:paddingStart="@dimen/padding_Large"
+    android:paddingEnd="@dimen/_36sdp"
+    android:paddingBottom="@dimen/padding_X_Small"
+    android:orientation="vertical"
+    tools:context=".adapter.ChatAdapter">
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="start"
+           android:orientation="horizontal">
+
+           <!--User Photo-->
+           <com.go.driver.wiget.CircleImageView
+               android:id="@+id/photo"
+               android:layout_width="@dimen/icon_Size_Default"
+               android:layout_height="@dimen/icon_Size_Default"
+               android:layout_gravity="bottom|start"
+               android:scaleType="centerCrop"
+               android:background="@android:color/transparent"
+               tools:src="@drawable/ic_avatar_male"/>
+
+           <!--Message-->
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/message"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:background="@drawable/shape_message_box"
+               android:layout_marginStart="@dimen/margin_Medium"
+               android:paddingTop="@dimen/_6sdp"
+               android:paddingStart="@dimen/padding_Default"
+               android:paddingEnd="@dimen/padding_Default"
+               android:paddingBottom="@dimen/_6sdp"
+               tools:text="Message, bla bla blaaaaaa"
+               android:textSize="@dimen/text_Size_X_Small"
+               android:textColor="@color/font_Color_Dark"/>
+
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <!--Time-->
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/sentAt"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="start"
+           android:layout_marginTop="@dimen/margin_XX_Small"
+           android:layout_marginStart="@dimen/_36sdp"
+           tools:text="5:30 Am"
+           android:textSize="@dimen/text_Size_XXXX_Small"
+           android:textColor="@color/font_Color_Gray"
+           android:visibility="gone"/>
+
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:visibility="gone"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

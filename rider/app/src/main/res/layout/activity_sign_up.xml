@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/activity_Bg"
+    tools:context=".activity.SignUpActivity">
+
+    <FrameLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/icon_top"
+            android:layout_marginEnd="@dimen/_minus20sdp"
+            android:scaleType="fitXY"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_Btn"
+            android:layout_width="@dimen/icon_Size_X_Large"
+            android:layout_height="@dimen/icon_Size_X_Large"
+            android:layout_marginStart="@dimen/margin_Small"
+            android:layout_marginTop="@dimen/margin_XX_Large"
+            android:layout_gravity="top|start"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_left"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/padding_XX_Large"
+        android:paddingStart="@dimen/padding_XX_Large"
+        android:paddingEnd="@dimen/padding_XX_Large"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                style="@style/TitleTvStyle"
+                android:text="@string/signUp"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:requiresFadingEdge="vertical"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="@dimen/fading_Edge_Length"
+                android:scrollbars="none">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--FullName-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/HintTvStyle"
+                            android:text="@string/nameTitle"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/name_Input_Etxt"
+                            style="@style/InputFieldStyle"
+                            android:inputType="textPersonName"
+                            android:hint="@string/name_Hint"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Email-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/HintTvStyle"
+                            android:text="@string/emailTitle"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/email_Input_Etxt"
+                            style="@style/InputFieldStyle"
+                            android:inputType="textEmailAddress"
+                            android:hint="@string/email_Hint"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Gender-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/HintTvStyle"
+                            android:text="@string/genderTitle"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/gender_Input_Etxt"
+                            style="@style/InputFieldStyle"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:hint="@string/gender_Hint"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Address-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/HintTvStyle"
+                            android:text="@string/addressTitle"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/address_Input_Etxt"
+                            style="@style/InputFieldStyle"
+                            android:hint="@string/address_Hint"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="horizontal">
+
+                        <!--Gender-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_Default"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/HintTvStyle"
+                                android:text="@string/districtTitle"/>
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/district_Input_Etxt"
+                                style="@style/InputFieldStyle"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:inputType="textAutoComplete|textCapWords"
+                                android:hint="@string/district_Hint"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <!--Age-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/HintTvStyle"
+                                android:text="@string/upazilaTitle"/>
+
+                            <com.go.rider.wiget.InstantAutoCompleteTextView
+                                android:id="@+id/upazila_Input_Etxt"
+                                style="@style/InputFieldStyle"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:inputType="textAutoComplete|textCapWords"
+                                android:hint="@string/upazila_Hint"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_Default"
+                        android:orientation="horizontal">
+
+                        <!--Gender-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_Default"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/HintTvStyle"
+                                android:text="@string/postalCodeTitle"/>
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/postalCode_Input_Etxt"
+                                style="@style/InputFieldStyle"
+                                android:inputType="number|numberPassword"
+                                android:digits="0123456789"
+                                android:hint="@string/postalCode_Hint"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <!--Age-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/HintTvStyle"
+                                android:text="@string/countryTitle"/>
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/country_Input_Etxt"
+                                style="@style/InputFieldStyle"
+                                android:hint="@string/country_Hint"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_X_Large"
+                        android:layout_marginBottom="@dimen/margin_XX_Large">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/signUpBtn"
+                            android:layout_width="@dimen/icon_Size_XX_Large"
+                            android:layout_height="@dimen/icon_Size_XX_Large"
+                            android:padding="@dimen/padding_X_Large"
+                            android:layout_margin="@dimen/margin_X_Small"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/shape_round"
+                            app:srcCompat="@drawable/ic_arrow_right"
+                            android:elevation="@dimen/card_Elevation_Small"/>
+
+                    </FrameLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Remove the following "exclude" elements to make them a part of the auto backup -->
+    <!-- Exclude the shared preferences file that contains the GCM registrationId -->
+    <exclude
+        domain="sharedpref"
+        path="showGuideView.xml" />
+    <exclude
+        domain="sharedpref"
+        path="isConnected.xml" />
+    <exclude
+        domain="sharedpref"
+        path="isLoggedIn.xml" />
+    <exclude
+        domain="sharedpref"
+        path="direction.xml" />
+    <exclude
+        domain="sharedpref"
+        path="signInData.xml" />
+    <exclude
+        domain="sharedpref"
+        path="location.xml" />
+    <exclude
+        domain="sharedpref"
+        path="isFirstLaunch.xml" />
+    <exclude
+        domain="sharedpref"
+        path="isNotificationPermissionForbid.xml" />
+    <exclude
+        domain="sharedpref"
+        path="language.xml" />
+</full-backup-content>

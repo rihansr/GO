@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:background="@color/colorWhite"
+tools:context=".fragment.ContactFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/icon_leaf"
+        android:tint="@color/colorTrans"
+        android:scaleType="centerCrop"/>
+
+<!--Toolbar-->
+<include
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    layout="@layout/layout_toolbar"/>
+
+<!--Logo-->
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/bottomPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/logo_Size"
+        android:layout_height="@dimen/logo_Size"
+        android:background="@drawable/shape_round"
+        app:srcCompat="@drawable/go_logo"
+        android:padding="@dimen/padding_XX_Large"
+        android:adjustViewBounds="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rideSharingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_Default"
+        android:text="@string/rideSharing"
+        android:textSize="@dimen/text_Size_X_Large"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/versionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_X_Small"
+        tools:text="v 1.0.0"
+        android:textSize="@dimen/text_Size_Small"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

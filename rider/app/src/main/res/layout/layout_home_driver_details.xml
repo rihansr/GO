@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tripRequestContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="false"
+    tools:context=".activity.HomeActivity">
+
+    <!--Shadow View-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shadow_Height"
+        android:background="@drawable/shape_top_shadow"
+        app:layout_anchor="@id/driverContent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/driverContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/dialog_Bg"
+        android:paddingTop="@dimen/padding_X_Large"
+        android:paddingStart="@dimen/padding_X_Large"
+        android:paddingEnd="@dimen/padding_X_Large"
+        android:paddingBottom="@dimen/padding_Medium"
+        tools:ignore="DisableBaselineAlignment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.go.rider.wiget.CircleImageView
+                android:id="@+id/driverPhoto"
+                android:layout_width="@dimen/icon_Size_Large"
+                android:layout_height="@dimen/icon_Size_Large"
+                android:layout_gravity="bottom|start"
+                android:scaleType="centerCrop"
+                android:background="@drawable/shape_round"
+                android:backgroundTint="@color/colorSmokeWhite"
+                android:layout_margin="@dimen/margin_Small"
+                android:src="@drawable/ic_avatar_male"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_Medium"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driverName"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="Mr. Driver"
+                        android:textSize="@dimen/text_Size_Small"
+                        android:textStyle="bold"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driverRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:drawableStart="@drawable/ic_rating_star"
+                        android:drawablePadding="@dimen/margin_Small"
+                        android:text="0.00"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/icon_Color_Dark"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/estimateDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2 km away"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <View
+                        android:layout_width="@dimen/border_Small"
+                        android:layout_height="@dimen/text_Size_XXXX_Small"
+                        android:layout_margin="@dimen/margin_Small"
+                        android:background="@color/icon_Color_Gray"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/estimateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2 min"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_Large"
+            android:layout_marginStart="@dimen/margin_X_Small"
+            android:layout_marginBottom="@dimen/margin_X_Large"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tripAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/driver_Location"
+                android:textSize="@dimen/text_Size_XX_Small"
+                android:textStyle="bold"
+                android:textColor="@color/font_Color_Dark"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tripAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/padding_Small"
+                android:layout_marginTop="@dimen/margin_X_Small"
+                tools:text="Chittagong, bangladesh"
+                android:textSize="@dimen/text_Size_XX_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/contactBtn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/contact"
+                android:textSize="@dimen/text_Size_Small"
+                android:textColor="@color/font_Color_Green"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="@dimen/border_Small"
+                android:layout_height="@dimen/_32sdp"
+                android:background="@color/colorSmokeWhite"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancelBtn"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/cancel"
+                android:textSize="@dimen/text_Size_Small"
+                android:textColor="@color/font_Color_Green"
+                android:textAllCaps="false"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

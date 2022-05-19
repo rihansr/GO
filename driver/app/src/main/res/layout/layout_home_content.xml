@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeActivity">
+
+    <!--Map Content-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Map-->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--Top Bar-->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="@dimen/margin_XX_Large"
+            android:paddingStart="@dimen/padding_Medium"
+            android:paddingEnd="@dimen/padding_Medium">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/menu_Btn"
+                android:layout_width="@dimen/icon_Size_Large"
+                android:layout_height="@dimen/icon_Size_Large"
+                android:padding="@dimen/padding_Small"
+                android:layout_margin="@dimen/margin_Small"
+                android:background="@drawable/shape_round"
+                android:layout_gravity="start|center_vertical"
+                android:backgroundTint="@color/font_Color_Light"
+                android:tint="@color/icon_Color_Dark"
+                android:elevation="@dimen/card_Elevation_Default"
+                app:srcCompat="@drawable/ic_nav_menu"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/back_Btn"
+                android:layout_width="@dimen/icon_Size_Large"
+                android:layout_height="@dimen/icon_Size_Large"
+                android:padding="@dimen/padding_Small"
+                android:layout_margin="@dimen/margin_Small"
+                android:background="@drawable/shape_round"
+                android:layout_gravity="start|center_vertical"
+                android:backgroundTint="@color/font_Color_Light"
+                android:tint="@color/icon_Color_Dark"
+                android:elevation="@dimen/card_Elevation_Default"
+                app:srcCompat="@drawable/ic_arrow_left"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <!--Snap Button-->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/snap_Btn"
+            android:layout_width="@dimen/icon_Size_Default"
+            android:layout_height="@dimen/icon_Size_Default"
+            android:padding="@dimen/padding_Small"
+            android:background="@drawable/shape_round"
+            android:elevation="@dimen/card_Elevation_Default"
+            android:layout_gravity="bottom|end"
+            android:backgroundTint="@color/font_Color_Light"
+            android:tint="@color/icon_Color_Dark"
+            app:srcCompat="@drawable/ic_snap"/>
+
+    </FrameLayout>
+
+    <!--Trip Request Content-->
+    <include layout="@layout/layout_trip_request"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.TripDetailsFragment">
+
+    <!--Trip Details-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_minus6sdp"
+        android:paddingTop="@dimen/padding_Medium"
+        android:paddingStart="@dimen/padding_X_Large"
+        android:paddingEnd="@dimen/padding_X_Large"
+        android:paddingBottom="@dimen/padding_Large"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Trip Id & Date-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_Default"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tripDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginBottom="@dimen/margin_X_Small"
+                    tools:text="May 30, 2020"
+                    android:textSize="@dimen/text_Size_XX_Small"
+                    android:textColor="@color/font_Color_Gray"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tripId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginTop="@dimen/margin_X_Small"
+                    android:layout_marginBottom="@dimen/margin_X_Small"
+                    tools:text="Trip Id #RC5TYCKU"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_Size_XX_Small"
+                    android:textColor="@color/font_Color_Dark"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/border_Small"
+                android:layout_marginTop="@dimen/margin_Large"
+                android:layout_marginBottom="@dimen/margin_Large"
+                android:background="@color/colorSmokeWhite" />
+
+            <!--Trip Location-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium"
+                android:layout_gravity="end"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--Greeting Message-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/greetingTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    tools:text="Thanks Driver, for choosing Go"
+                    android:textSize="@dimen/text_Size_X_Small"
+                    android:textColor="@color/font_Color_Gray"/>
+
+                <!--Pickup & Dropoff-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_Medium">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_X_Small"
+                        android:layout_marginBottom="@dimen/margin_X_Small"
+                        android:layout_marginEnd="@dimen/margin_Default"
+                        android:src="@drawable/ic_from_to"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/pickUpLocation"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="top"
+                            android:gravity="top"
+                            android:layout_marginBottom="@dimen/margin_Small"
+                            tools:text="Chittagong, bangladesh"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dropOffLocation"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                            android:layout_marginTop="@dimen/margin_Small"
+                            tools:text="Dhaka, bangladesh"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Trip Receipt-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_Large"
+                android:layout_marginBottom="@dimen/margin_Large"
+                android:padding="@dimen/padding_Large"
+                android:background="@color/colorSmokeWhite"
+                android:orientation="vertical">
+
+                <!--Total Fare & Payment Type-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Total Fare-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:gravity="start|top"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginBottom="@dimen/margin_X_Small"
+                            android:text="@string/totalFare"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_Size_XXX_Small"
+                            android:textColor="@color/font_Color_Gray"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tripFare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:drawableStart="@drawable/ic_taka"
+                            android:drawablePadding="@dimen/padding_X_Small"
+                            android:layout_marginTop="@dimen/margin_X_Small"
+                            tools:text="125"
+                            android:textSize="@dimen/text_Size_X_Large"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Payment Type-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_Small"
+                        android:gravity="end|top"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginBottom="@dimen/margin_X_Small"
+                            android:text="@string/paymentType"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_Size_XXX_Small"
+                            android:textColor="@color/font_Color_Gray"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/paymentType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginTop="@dimen/margin_X_Small"
+                            tools:text="@string/cash"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--Fare Breakdown-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:layout_marginTop="@dimen/margin_Large"
+                        android:layout_marginBottom="@dimen/margin_X_Small"
+                        android:text="@string/fareBreakdown"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_Size_XXX_Small"
+                        android:textColor="@color/font_Color_Gray"/>
+
+                    <!--Subtotal-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_X_Small"
+                        android:layout_marginBottom="@dimen/margin_X_Small"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginBottom="@dimen/margin_X_Small"
+                            android:text="@string/subtotal"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/subtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginTop="@dimen/margin_X_Small"
+                            tools:text="125"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Promo-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_X_Small"
+                        android:layout_marginBottom="@dimen/margin_X_Small"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginBottom="@dimen/margin_X_Small"
+                            android:text="@string/promo"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/promo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginTop="@dimen/margin_X_Small"
+                            tools:text="-25"
+                            android:textSize="@dimen/text_Size_XX_Small"
+                            android:textColor="@color/font_Color_Dark"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--Divider-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:background="@color/colorLightGray"
+                    android:alpha=".25"/>
+
+                <!--Total-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_X_Small"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:layout_marginBottom="@dimen/margin_X_Small"
+                        android:text="@string/total"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:drawableStart="@drawable/ic_taka"
+                        android:drawablePadding="@dimen/padding_X_Small"
+                        android:layout_marginTop="@dimen/margin_X_Small"
+                        tools:text="125"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_Size_XX_Small"
+                        android:textColor="@color/font_Color_Dark"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Rider Info-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Large"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginBottom="@dimen/margin_X_Small"
+                    android:text="@string/youRideWith"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_Size_XXX_Small"
+                    android:textColor="@color/font_Color_Gray"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_minus4sdp"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.go.rider.wiget.CircleImageView
+                        android:id="@+id/driverPhoto"
+                        android:layout_width="@dimen/icon_Size_Large"
+                        android:layout_height="@dimen/icon_Size_Large"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_round"
+                        android:backgroundTint="@color/colorSmokeWhite"
+                        android:layout_margin="@dimen/margin_Small"
+                        android:src="@drawable/ic_avatar_male" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_Medium"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_XX_Small"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/driverName"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_Small"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                tools:text="Mr. Rider"
+                                android:textSize="@dimen/text_Size_X_Small"
+                                android:textColor="@color/font_Color_Dark"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                android:id="@+id/riderRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginStart="@dimen/margin_Small"
+                                android:progressTint="@color/font_Color_Green"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:rating="0"
+                                android:max="5" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vehicleModel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_XX_Small"
+                            tools:text="Toyota Corolla"
+                            android:textSize="@dimen/text_Size_XXX_Small"
+                            android:textColor="@color/font_Color_Gray"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Trip Issues-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginBottom="@dimen/margin_X_Small"
+                    android:text="@string/tripIssues"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_Size_XXX_Small"
+                    android:textColor="@color/font_Color_Gray"/>
+
+                <!--Trip Issues-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvIssues"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/sample_issue"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Toolbar-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_toolbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.SearchPlaceFragment">
+
+    <!--Content-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_minus6sdp"
+        android:paddingTop="@dimen/padding_Large"
+        android:paddingBottom="@dimen/padding_Large"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="3"
+            tools:listitem="@layout/sample_search_place"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Toolbar-->
+    <com.go.rider.wiget.ArcView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="parallax"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="@dimen/_6sdp"
+        app:shape_arc_position="bottom">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_placeholder"
+            android:paddingTop="@dimen/margin_XX_Large"
+            android:paddingBottom="@dimen/margin_X_Large"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="top"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="@dimen/icon_Size_X_Large"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/padding_Default"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_arrow_left" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/place_Input_Etxt"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_search_field"
+                    android:drawablePadding="@dimen/padding_Medium"
+                    android:layout_marginEnd="@dimen/margin_Large"
+                    android:padding="@dimen/padding_Large"
+                    android:paddingStart="@dimen/padding_Default"
+                    android:paddingEnd="@dimen/padding_Default"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_Size_X_Small"
+                    android:textColor="@color/font_Color_Light"
+                    android:textColorHint="#BFFFFFFF"
+                    android:fontFamily="monospace"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:hint="@string/searchPlace_Hint"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.go.rider.wiget.ArcView>
+
+</RelativeLayout>

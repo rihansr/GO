@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/findingTripsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".activity.HomeActivity">
+
+    <!--Map Content-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_XX_Large"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lottie/searching_driver.json"
+        app:lottie_loop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/padding_Large"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/findingTrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_button_enable"
+            android:padding="@dimen/padding_Default"
+            android:text="@string/findingRide"
+            android:textColor="@color/font_Color_Light"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_Size_Medium"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_Default"
+            app:lottie_colorFilter="@color/colorWhite"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie/searching.json"
+            app:lottie_loop="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

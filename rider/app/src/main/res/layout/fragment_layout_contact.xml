@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.ContactFragment">
+
+    <!--Messages-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvMessages"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_minus6sdp"
+        android:paddingTop="@dimen/padding_X_Large"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/sample_receiver_message"
+        android:overScrollMode="never"/>
+
+    <!--Toolbar-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_toolbar"/>
+
+    <!--Message Input-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvDefaultMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingEnd="@dimen/padding_Small"
+            android:layout_marginBottom="@dimen/margin_Small"
+            android:layout_marginTop="@dimen/margin_Large"
+            android:clipToPadding="true"
+            tools:itemCount="5"
+            tools:listitem="@layout/sample_message"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:scrollbars="none"
+            android:overScrollMode="never"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_Medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/message_Input_Etxt"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_96sdp"
+                android:background="@drawable/shape_message_box"
+                android:backgroundTint="@color/colorSmokeWhite"
+                android:paddingTop="@dimen/padding_Medium"
+                android:paddingStart="@dimen/padding_Large"
+                android:paddingEnd="@dimen/padding_Large"
+                android:paddingBottom="@dimen/padding_Medium"
+                android:gravity="center_vertical"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/text_Size_Small"
+                android:textColor="@color/font_Color_Dark"
+                android:textColorHint="@color/font_Color_LightGray"
+                android:fontFamily="monospace"
+                android:hint="@string/message_Hint"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/sendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/padding_Large"
+                android:paddingEnd="0dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_message_sent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

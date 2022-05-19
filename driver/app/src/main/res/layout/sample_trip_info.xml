@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/requestContent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/padding_X_Large"
+    tools:context=".adapter.TripAdapter">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tripDate"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_Medium"
+                tools:text="3/10/20, 5:30 PM"
+                android:textSize="@dimen/text_Size_X_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tripFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_taka"
+                android:drawablePadding="@dimen/padding_X_Small"
+                tools:text="100"
+                android:textSize="@dimen/text_Size_X_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_X_Small"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/vehicleModel"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Toyota Corolla"
+                android:textSize="@dimen/text_Size_XX_Small"
+                android:textColor="@color/font_Color_Gray"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/riderRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:progressTint="@color/font_Color_Green"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:rating="0"
+                android:max="5"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_Large">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_X_Small"
+            android:layout_marginBottom="@dimen/margin_X_Small"
+            android:layout_marginEnd="@dimen/margin_Default"
+            android:src="@drawable/ic_from_to"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pickUpLocation"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:layout_marginBottom="@dimen/margin_Small"
+                tools:text="Chittagong, bangladesh"
+                android:textSize="@dimen/text_Size_XX_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dropOffLocation"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/margin_Small"
+                tools:text="Dhaka, bangladesh"
+                android:textSize="@dimen/text_Size_XX_Small"
+                android:textColor="@color/font_Color_Dark"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
